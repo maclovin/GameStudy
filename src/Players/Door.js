@@ -1,9 +1,15 @@
-function Door(pos) {
-  this.pos = pos;
-  this.size = new Vector(1, 1);
-  this.basePos = this.pos = pos;
-   this.size = new Vector(.6, .6);
+import { Vector } from './../Modules';
+
+class Door {
+  constructor(pos) {
+    this.pos = pos;
+    this.size = new Vector(1, 1);
+    this.basePos = this.pos = pos;
+    this.size = new Vector(.6, .6);
+    this.type = "door";
+  }
+
+  act() {}
 };
 
-Door.prototype.type = "door";
-Door.prototype.act = function() {};
+export default Door;
