@@ -1,5 +1,5 @@
 body{
-    background: url(https://i.imgur.com/pnztT1T.gif);
+    background: #000;
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -16,11 +16,10 @@ h2{
     padding:  0;
 }
 .lava, .actor{
-    background: #e55;
+    background: red;
 }
 .wall{
-    background: #444;
-    border: solid 3px #333;
+    background: #fff;
     box-sizing: content-box;
 }
 .actor{
@@ -33,7 +32,7 @@ h2{
   background: #000;
 }
 .player{
-    background: #fff;
+    background: rgb(88, 88, 211);
 }
 .lost .player{
     background: #a04040;

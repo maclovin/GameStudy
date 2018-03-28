@@ -4,8 +4,8 @@
   "description": "...",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --color",
-    "build": "webpack  --color --mode production"
+    "start": "webpack-dev-server --mode development --hot --color",
+    "build": "webpack --color --mode production"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "mini-css-extract-plugin": "^0.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "style-loader": "^0.20.3",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"

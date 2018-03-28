@@ -1,13 +1,13 @@
 import { Vector } from './../Modules';
 
 const playerXSpeed = 10;
-const gravity = 30;
+const gravity = 40;
 const jumpSpeed = 17;
 
 class Player {
   constructor(pos) {
     this.pos = pos.plus(new Vector(0, -.5));
-    this.size = new Vector(.5, 2);
+    this.size = new Vector(.5, 1.3);
     this.speed = new Vector(0, 0);
     this.type = 'player';
   }
