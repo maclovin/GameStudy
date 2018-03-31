@@ -6,11 +6,14 @@ import {
 } from './Modules';
 
 const LEVELS = [LevelTest01, LevelTest02];
-const arrowCodes = {37: 'left', 38: 'up', 39: 'right'};
+const arrowCodes = {37: 'left', 32: 'up', 39: 'right'};
+const arrows = trackKeys(arrowCodes);
 
 function trackKeys(codes) {
-  var pressed = Object.create(null);
+  const pressed = Object.create(null);
+  
   function handler(event) {
+    console.log(codes);
     if (codes.hasOwnProperty(event.keyCode)) {
       var down = event.type == 'keydown';
       pressed[codes[event.keyCode]] = down;
@@ -36,8 +39,6 @@ function runAnimation(frameFunc) {
   }
   requestAnimationFrame(frame);
 }
-
-var arrows = trackKeys(arrowCodes);
 
 function runLevel(level, Display, andThen) {
   var display = new Display(document.body, level);
