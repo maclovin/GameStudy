@@ -4,6 +4,7 @@ import {
 	DOMDisplay,
 	Level,
 } from './Modules';
+import { Dialog } from './UI';
 
 const LEVELS = [LevelTest01, LevelTest02];
 const arrowCodes = {37: 'left', 32: 'up', 39: 'right'};
@@ -68,4 +69,10 @@ function runGame(plans, Display, levelNumber) {
   startLevel(levelNumber);
 }
 
+function loadUI() {
+  const GamepadDialog = new Dialog('dialog--gamepad', 'Gamepad Settings', ['200px', '200px'], [20, 20]);
+  GamepadDialog.render();
+}
+
 runGame(LEVELS, DOMDisplay, 0);
+loadUI();
