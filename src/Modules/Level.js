@@ -92,7 +92,7 @@ class Level {
 	    this.finishDelay -= step;
 
 	  while (step > 0) {
-	    var thisStep = Math.min(step, maxStep);
+			var thisStep = Math.min(step, maxStep);
 	    this.actors.forEach(function(actor) {
 	      actor.act(thisStep, this, keys);
 	    }, this);

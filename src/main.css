@@ -1,9 +1,20 @@
-body{
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+* {
+    cursor: nw-resize;
+}
+
+body {
     background: #000;
     background-size:cover;
     background-repeat: no-repeat;
     color: #fff;
-    font-family: "Hack", Menlo, Consola, Courier;
+    font-family: "Press Start 2P", "Hack", Menlo, Consola, Courier;
     padding: 0;
     margin: 0;
 }
@@ -52,27 +63,73 @@ h2{
 }
 
 .dialog {
-    color: rgb(51, 255, 0);
+    color: #fff;
     background: #000;
-    border: solid 5px rgb(51, 255, 0);
-    box-shadow: 6px 6px 0px 0px rgb(51, 255, 0);
+    border: solid 5px #fff;
+    box-shadow: 6px 6px 0px 0px #fff;
     z-index: 999999;
 }
 
 .dialog__top {
-    background: rgb(51, 255, 0);
+    background: #fff;
     color: #000;
     padding-bottom: 5px;
     text-transform: uppercase;
+    font-size: 16px;
+}
+
+.dialog--caution {
+    color: rgb(255, 80, 80);
+    background: #000;
+    border: solid 5px rgb(255, 80, 80);
+    box-shadow: 6px 6px 0px 0px rgb(255, 80, 80);
+}
+
+.dialog--caution .dialog__top {
+    background: rgb(255, 80, 80);
+}
+
+.dialog--success {
+    color: rgb(112, 248, 80);
+    background: #000;
+    border: solid 5px rgb(112, 248, 80);
+    box-shadow: 6px 6px 0px 0px rgb(112, 248, 80);
+}
+
+.dialog--success .dialog__top {
+    background: rgb(112, 248, 80);
+}
+
+.dialog--info {
+    color: rgb(44, 172, 204);
+    background: #000;
+    border: solid 5px rgb(44, 172, 204);
+    box-shadow: 6px 6px 0px 0px rgb(44, 172, 204);
+}
+
+.dialog--info .dialog__top {
+    background: rgb(44, 172, 204);
+}
+
+.dialog--warning {
+    color: rgb(238, 225, 45);
+    background: #000;
+    border: solid 5px rgb(238, 225, 45);
+    box-shadow: 6px 6px 0px 0px rgb(238, 225, 45);
+}
+
+.dialog--warning .dialog__top {
+    background: rgb(238, 225, 45);
 }
 
 .dialog__top-close {
     background: none;
     border: none;
     color: #000;
+    font-family: "Press Start 2P";
     font-size: 20px;
     position: absolute;
-    right: 0;
-    margin-top: -4px;
+    right: 5px;
+    margin-top: -10px;
     padding: 0;
 }
