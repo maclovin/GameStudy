@@ -1,4 +1,5 @@
 import style from './main.css';
+import Polifills from './Polyfills';
 import { LevelTest01, LevelTest02 } from './Levels';
 import {
 	DOMDisplay,
